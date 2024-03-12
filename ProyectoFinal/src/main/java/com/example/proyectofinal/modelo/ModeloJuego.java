@@ -1,10 +1,10 @@
 package com.example.proyectofinal.modelo;
 
-import com.example.proyectofinal.juego.Juego;
-import com.example.proyectofinal.juego.Pozo;
-import com.example.proyectofinal.juego.Tablero;
-import com.example.proyectofinal.modelo.Grupo;
-import com.example.proyectofinal.modelo.Jugador;
+import com.example.proyectofinal.dominio.Grupo;
+import com.example.proyectofinal.dominio.Jugador;
+import com.example.proyectofinal.dominio.Pozo;
+import com.example.proyectofinal.dominio.Tablero;
+
 public class ModeloJuego {
 
     private Grupo grupo;
@@ -27,7 +27,7 @@ public class ModeloJuego {
 
     }
 
-    public void jalarFichasPozo(){
+    public void jalarFichaPozo(){
 
     }
 
