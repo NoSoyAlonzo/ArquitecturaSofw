@@ -1,0 +1,14 @@
+#panelPrincipal{
+-fx-border-style:solid;
+-fx-background-color:#409235;
+}
+#panelControles{
+-fx-border-style:solid;
+-fx-background-color:#673138;
+
+}
+.label{
+
+-fx-background-color:#FFFFFF;
+
+}
