@@ -1,16 +1,28 @@
 package com.example.proyectofinal.modelo;
 
-import com.example.proyectofinal.dominio.Grupo;
-import com.example.proyectofinal.dominio.Jugador;
-import com.example.proyectofinal.dominio.Pozo;
-import com.example.proyectofinal.dominio.Tablero;
+import com.example.proyectofinal.dominio.*;
+
 
 public class ModeloJuego {
 
-    private Grupo grupo;
-    private Jugador jugador;
+    private static ModeloJuego instanciaModeloJuego;
+
     private Pozo pozo;
     private Tablero tablero;
+    private Juego juego;
+
+    private ModeloJuego(){
+        pozo = Pozo.getInstance();
+        tablero = Tablero.getInstance();
+        juego = Juego.getInstance();
+    }
+
+    public static synchronized ModeloJuego getInstance(){
+        if (instanciaModeloJuego == null){
+            instanciaModeloJuego = new ModeloJuego();
+        }
+        return instanciaModeloJuego;
+    }
 
     //metodos
     public void dividirGrupo(){
