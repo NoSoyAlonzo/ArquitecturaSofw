@@ -18,12 +18,17 @@ public class ControlJuego {
         return instanciaControlJuego;
     }
 
-    public void dividirGrupo(){};
+    public void dividirGrupo(){
+        modeloJuego.dividirGrupo();
+    };
+
     public void terminarTurno(){};
     public void jalarFichaPozo(){
         modeloJuego.jalarFichaPozo();
     };
-    public void pasarTurnoJugador(){};
+    public void pasarTurnoJugador(){
+        modeloJuego.pasarTurno();
+    };
     public void colocarFichaGrupo(){};
 
 }
