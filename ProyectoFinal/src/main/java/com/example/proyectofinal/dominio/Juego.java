@@ -2,6 +2,7 @@ package com.example.proyectofinal.dominio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Juego {
 
@@ -9,6 +10,8 @@ public class Juego {
     private Pozo pozo;
     private List<Jugador> listaJugador;
     private Ficha[] fichasCompletas;
+    private Jugador jugadorTurno;
+
 
     private Juego(){
         pozo = Pozo.getInstance();
@@ -22,13 +25,32 @@ public class Juego {
         }
         return instanciaJuego;
     }
-    public void cambiarTurno(){};
-    public void obtenerTurnoSiguiente(){};
+
+    public Jugador cambiarTurno(){
+        Random random = new Random();
+        int indiceAleatorio = random.nextInt(listaJugador.size());
+        return jugadorTurno = listaJugador.get(indiceAleatorio);
+    }
+
+    public void obtenerTurnoSiguiente(){
+        cambiarTurno();
+    };
+
     public void jalarFichaPozo(){
         pozo.validarPozoVacio();
     };
+
     public void pasarFichaJugador(Ficha ficha){
-        lis
+        if (ficha != null) {
+            for (int i = 0; i < listaJugador.size(); i++) {
+                if (listaJugador.get(i).getNombreUsuario().equalsIgnoreCase(jugadorTurno.getNombreUsuario())) {
+                    listaJugador.get(i).agregarFicha(ficha);
+                }
+            }
+            cambiarTurno();
+        }else{
+            throw new IllegalStateException("Objeto ficha vacío");
+        }
     };
 
     public Pozo getPozo() {
