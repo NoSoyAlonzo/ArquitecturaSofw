@@ -1,8 +1,10 @@
 package com.example.proyectofinal.vista;
 
 import com.example.proyectofinal.controlador.ControlJuego;
+import com.example.proyectofinal.modelo.ModeloFiltro;
+import com.example.proyectofinal.modelo.Observador;
 
-public class PantallaJuego {
+public class PantallaJuego implements Observador {
     private static PantallaJuego instanciaPantallaJuego;
     private ControlJuego controlJuego;
 
@@ -18,13 +20,18 @@ public class PantallaJuego {
     }
 
     public void notificarCambios(){
-
+        ModeloFiltro modeloFiltro;
     };
     public void clickPasarTurno(){};
     public void clickJalarFicha(){};
     public void clickDividirGrupo(){};
     public void clickPonerFicha(){};
     public void clickTerminarTurno(){};
+
+    @Override
+    public void actualizar() {
+
+    }
 
 
 }

@@ -3,12 +3,13 @@ package com.example.proyectofinal.modelo;
 import com.example.proyectofinal.dominio.*;
 
 
-public class ModeloJuego {
+public class ModeloJuego implements ModeloFiltro {
 
     private static ModeloJuego instanciaModeloJuego;
     private Pozo pozo;
     private Tablero tablero;
     private Juego juego;
+    private Observador observador;
 
     private ModeloJuego(){
         pozo = Pozo.getInstance();
@@ -44,4 +45,8 @@ public class ModeloJuego {
         juego.obtenerTurnoSiguiente();
     }
 
+    @Override
+    public void actualizar() {
+
+    }
 }
