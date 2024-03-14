@@ -22,13 +22,13 @@ public class ControlJuego {
         modeloJuego.dividirGrupo();
     };
 
-    public void terminarTurno(){};
+    public void terminarTurno(){modeloJuego.validarGrupos();};
     public void jalarFichaPozo(){
         modeloJuego.jalarFichaPozo();
     };
     public void pasarTurnoJugador(){
         modeloJuego.pasarTurno();
     };
-    public void colocarFichaGrupo(){};
+    public void colocarFichaGrupo(){modeloJuego.verifColocarFichaGrupo();};
 
 }
