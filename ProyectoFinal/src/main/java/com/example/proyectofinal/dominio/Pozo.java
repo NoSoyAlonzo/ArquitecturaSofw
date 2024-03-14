@@ -28,8 +28,7 @@ public class Pozo {
     public void quitarFicha(){}
     public void validarPozoVacio(){
         if (listaFichas == null || listaFichas.isEmpty()) {
-
-            return;
+            exc.mostrarExcepcion("Pozo", "Pozo vacío");
         }else{
             juego.pasarFichaJugador(quitarFichaAleatoria());
         }
