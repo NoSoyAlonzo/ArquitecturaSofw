@@ -3,10 +3,8 @@ package com.example.proyectofinal.dominio;
 public class FichaComodin extends Ficha{
     private String simbolo;
 
-    public FichaComodin() {
-    }
-
-    public FichaComodin(String simbolo) {
+    public FichaComodin(ColorManager color, String simbolo) {
+        super(color);
         this.simbolo = simbolo;
     }
 
