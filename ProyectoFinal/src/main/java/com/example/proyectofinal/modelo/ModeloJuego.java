@@ -40,7 +40,7 @@ public class ModeloJuego {
     }
 
     public void jalarFichaPozo(){
-
+        juego.jalarFichaPozo();
     }
 
     public void pasarTurno(){
