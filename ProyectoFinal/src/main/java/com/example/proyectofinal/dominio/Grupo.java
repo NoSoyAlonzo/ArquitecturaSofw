@@ -47,7 +47,16 @@ public class Grupo {
     public void dividirGrupo(){
 
     }
-    public void validarGrupo(){
 
+    /**
+     * Método para validar el estado del grupo, si está en buen estado retorna true, si no false.
+     * @return
+     */
+    public boolean validarGrupo(){
+        if (listaFichas.size() > 2) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }
