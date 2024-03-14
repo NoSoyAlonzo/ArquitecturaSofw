@@ -20,7 +20,9 @@ public class ControlJuego {
 
     public void dividirGrupo(){};
     public void terminarTurno(){};
-    public void jalarFichaPozo(){};
+    public void jalarFichaPozo(){
+        modeloJuego.jalarFichaPozo();
+    };
     public void pasarTurnoJugador(){};
     public void colocarFichaGrupo(){};
 
