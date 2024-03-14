@@ -29,12 +29,11 @@ public class ModeloJuego {
     }
 
     public void verifColocarFichaGrupo(){
-
-
+        tablero.obtenerGrupoDividido();
     }
 
     public void validarGrupos(){
-
+        tablero.obtenerGruposModificados();
     }
 
     public void jalarFichaPozo(){
