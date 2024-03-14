@@ -3,10 +3,8 @@ package com.example.proyectofinal.dominio;
 public class FichaNumero extends Ficha{
     private int numero;
 
-    public FichaNumero() {
-    }
-
-    public FichaNumero(int numero) {
+    public FichaNumero(ColorManager color, int numero) {
+        super(color);
         this.numero = numero;
     }
 
