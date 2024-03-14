@@ -6,7 +6,6 @@ import com.example.proyectofinal.dominio.*;
 public class ModeloJuego {
 
     private static ModeloJuego instanciaModeloJuego;
-
     private Pozo pozo;
     private Tablero tablero;
     private Juego juego;
@@ -26,8 +25,7 @@ public class ModeloJuego {
 
     //metodos
     public void dividirGrupo(){
-
-
+        tablero.obtenerGrupoDividido();
     }
 
     public void verifColocarFichaGrupo(){
@@ -44,8 +42,7 @@ public class ModeloJuego {
     }
 
     public void pasarTurno(){
-
-
+        juego.obtenerTurnoSiguiente();
     }
 
 }
