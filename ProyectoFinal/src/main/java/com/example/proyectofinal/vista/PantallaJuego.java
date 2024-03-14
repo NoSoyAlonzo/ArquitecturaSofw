@@ -17,7 +17,9 @@ public class PantallaJuego {
         return instanciaPantallaJuego;
     }
 
-    public void notificarCambios(){};
+    public void notificarCambios(){
+
+    };
     public void clickPasarTurno(){};
     public void clickJalarFicha(){};
     public void clickDividirGrupo(){};
