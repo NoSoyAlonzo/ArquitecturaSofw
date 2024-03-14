@@ -8,10 +8,12 @@ public class Juego {
     private static Juego instanciaJuego;
     private Pozo pozo;
     private List<Jugador> listaJugador;
+    private Ficha[] fichasCompletas;
 
     private Juego(){
         pozo = Pozo.getInstance();
         listaJugador = new ArrayList<>();
+        fichasCompletas =  new Ficha[106];
     }
 
     public static synchronized Juego getInstance(){
@@ -22,6 +24,26 @@ public class Juego {
     }
     public void cambiarTurno(){};
     public void obtenerTurnoSiguiente(){};
-    public void jalarFichasPozo(){};
-    public void pasarFichaJugador(){};
+    public void jalarFichaPozo(){
+        pozo.validarPozoVacio();
+    };
+    public void pasarFichaJugador(Ficha ficha){
+        lis
+    };
+
+    public Pozo getPozo() {
+        return pozo;
+    }
+
+    public void setPozo(Pozo pozo) {
+        this.pozo = pozo;
+    }
+
+    public List<Jugador> getListaJugador() {
+        return listaJugador;
+    }
+
+    public void setListaJugador(List<Jugador> listaJugador) {
+        this.listaJugador = listaJugador;
+    }
 }
