@@ -25,12 +25,12 @@ public class ModeloJuego implements ModeloFiltro {
     }
 
     //metodos
-    public void dividirGrupo(){
-        tablero.obtenerGrupoDividido();
+    public void dividirGrupo(Grupo grupo){
+        tablero.obtenerGrupoDividido(grupo);
     }
 
-    public void verifColocarFichaGrupo(){
-        tablero.obtenerGrupoDividido();
+    public void verifColocarFichaGrupo(Grupo grupo){
+        tablero.obtenerGrupoDividido(grupo);
     }
 
     public void validarGrupos(){

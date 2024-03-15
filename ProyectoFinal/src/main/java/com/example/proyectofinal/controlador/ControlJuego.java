@@ -1,5 +1,6 @@
 package com.example.proyectofinal.controlador;
 
+import com.example.proyectofinal.dominio.Grupo;
 import com.example.proyectofinal.modelo.ModeloJuego;
 
 public class ControlJuego {
@@ -18,8 +19,8 @@ public class ControlJuego {
         return instanciaControlJuego;
     }
 
-    public void dividirGrupo(){
-        modeloJuego.dividirGrupo();
+    public void dividirGrupo(Grupo grupo){
+        modeloJuego.dividirGrupo(grupo);
     };
 
     public void terminarTurno(){modeloJuego.validarGrupos();};
@@ -29,6 +30,6 @@ public class ControlJuego {
     public void pasarTurnoJugador(){
         modeloJuego.pasarTurno();
     };
-    public void colocarFichaGrupo(){modeloJuego.verifColocarFichaGrupo();};
+    //public void colocarFichaGrupo(){modeloJuego.verifColocarFichaGrupo();};
 
 }

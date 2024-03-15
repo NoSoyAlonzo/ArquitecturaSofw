@@ -36,15 +36,48 @@ public class Grupo {
     public void verificarColocarFicha(){
 
     }
-    public void agregarFicha(){
-
+    public void agregarFicha(Ficha ficha){
+        if (ficha != null) {
+            listaFichas.add(ficha);
+        }else{
+            throw new IllegalStateException("Problemas al agregar la ficha al grupo");
+        }
     }
 
     public void validarMovimientosGrupos(){
 
     }
 
-    public void dividirGrupo(){
+    public boolean dividirGrupo(Grupo grupoDividir, List<Ficha> listaFichasSeleccionadas){
+        boolean fichasRemovidas = false;
+        for (int i = 0; i < listaFichasSeleccionadas.size(); i++) {
+            if (grupoDividir.getListaFichas().contains(listaFichasSeleccionadas.get(i))){
+                listaFichas.remove(listaFichasSeleccionadas.get(i));
+                System.out.println("se removió: "+listaFichasSeleccionadas.get(i).getNumero());
+                fichasRemovidas = true;
+            }
+        }
+        if (fichasRemovidas == true) {
+            agregarGrupo(grupo);
+        }else{
+            throw new IllegalStateException("No se encontraron las fichas");
+        }
+    }
+
+    public void dividir(List<Ficha> listaFicha, Grupo grupo){
+        boolean fichasRemovidas = false;
+        for (int i = 0; i < listaFicha.size(); i++) {
+            if (grupo.getListaFichas().contains(listaFicha.get(i))){
+                listaFicha.remove(listaFicha.get(i));
+                System.out.println("se removió: "+listaFicha.get(i).getNumero());
+                fichasRemovidas = true;
+            }
+        }
+        if (fichasRemovidas == true) {
+            agregarGrupo(grupo);
+        }else{
+            throw new IllegalStateException("No se encontraron las fichas");
+        }
 
     }
 
