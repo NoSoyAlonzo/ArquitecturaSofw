@@ -44,6 +44,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void dividirGrupo(Grupo grupo){
         tablero.obtenerGrupoDividido(grupo);
+        actualizar(instanciaModeloJuego);
     }
 
     /**
@@ -61,6 +62,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void validarGrupos(){
         tablero.obtenerGruposModificados();
+        actualizar(instanciaModeloJuego);
     }
 
     /**
@@ -69,6 +71,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void jalarFichaPozo(){
         juego.jalarFichaPozo();
+        actualizar(instanciaModeloJuego);
     }
 
     /**
@@ -77,6 +80,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void pasarTurno(){
         juego.obtenerTurnoSiguiente();
+        actualizar(instanciaModeloJuego);
     }
 
     /**
@@ -84,7 +88,7 @@ public class ModeloJuego implements ModeloFiltro {
      * según haya cambiado la pantalla
      */
     @Override
-    public void actualizar() {
+    public void actualizar(ModeloJuego modeloJuego) {
 
     }
 }

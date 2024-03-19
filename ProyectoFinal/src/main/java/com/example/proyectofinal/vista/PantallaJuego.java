@@ -19,14 +19,16 @@ public class PantallaJuego implements Observador {
         return instanciaPantallaJuego;
     }
 
-    public void notificarCambios(){
-        ModeloFiltro modeloFiltro;
-    };
+    public void notificarCambios(){};
     public void clickPasarTurno(){};
     public void clickJalarFicha(){};
     public void clickDividirGrupo(){};
     public void clickPonerFicha(){};
     public void clickTerminarTurno(){};
+
+    public void update(ModeloFiltro modeloFiltro) {
+
+    }
 
     @Override
     public void actualizar() {
