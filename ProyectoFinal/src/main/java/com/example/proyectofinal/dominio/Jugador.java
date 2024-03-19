@@ -4,12 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Jugador {
+
+    /**
+     * Atributos de la clase Jugador
+     */
     private String nombreUsuario;
     private String rutaAvatar;
     private List<Ficha> listaFichas;
     private List<ColorManager> listaColoresSeleccionados;
     private int score;
 
+    /**
+     * Método constructor de un jugador
+     * @param nombreUsuario
+     * @param rutaAvatar
+     * @param listaFichas
+     * @param listaColoresSeleccionados
+     * @param score
+     */
     public Jugador(String nombreUsuario, String rutaAvatar, List<Ficha> listaFichas, List<ColorManager> listaColoresSeleccionados, int score) {
         this.nombreUsuario = nombreUsuario;
         this.rutaAvatar = rutaAvatar;
@@ -18,6 +30,10 @@ public class Jugador {
         this.score = score;
     }
 
+    /**
+     * Métodos get y set
+     * @return
+     */
     public String getNombreUsuario() {
         return nombreUsuario;
     }
@@ -58,11 +74,30 @@ public class Jugador {
         this.score = score;
     }
 
-    public void quitarFicha(){};
-    public void agregarFicha(Ficha ficha){};
-    public void pasarTurno(){};
-    public void modificarTurno(){};
-    public void obtenerTurnoSiguiente(){};
+    /**
+     * Método para quitar las fichas recibidas
+     * al jugador
+     * @param fichasQuitar
+     */
+    public void quitarFicha(List<Ficha> fichasQuitar){
+        if (!fichasQuitar.isEmpty()) {
+            for (int i = 0; i < fichasQuitar.size(); i++) {
+                if (listaFichas.contains(fichasQuitar.get(i))) {
+                    listaFichas.remove(fichasQuitar.get(i));
+                }
+            }
+        }
+    };
 
+    /**
+     * Método para agregar la ficha a la lista
+     * de fichas del jugador
+     * @param ficha
+     */
+    public void agregarFicha(Ficha ficha){
+        if (ficha != null) {
+            listaFichas.add(ficha);
+        }
+    };
 
 }
