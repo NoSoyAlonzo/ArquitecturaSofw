@@ -6,11 +6,18 @@ import java.util.Random;
 
 public class Pozo {
 
+    /**
+     * Atributos de la clase
+     */
     private static Pozo instanciaPozo;
     private Juego juego;
     Excepcion exc;
     private List<Ficha> listaFichas;
 
+    /**
+     * Método constructor de la clase
+     * en este se aplicó el singleton
+     */
     private Pozo(){
         listaFichas = new ArrayList <Ficha>();
         exc = new Excepcion();
@@ -18,14 +25,20 @@ public class Pozo {
     }
 
 
-    //metodos
+    /**
+     * Método para obtener una instancia de pozo
+     * @return
+     */
     public static synchronized Pozo getInstance(){
         if (instanciaPozo == null){
             instanciaPozo = new Pozo();
         }
         return instanciaPozo;
     }
-    public void quitarFicha(){}
+
+    /**
+     * Método para validar si el pozo está vacio
+     */
     public void validarPozoVacio(){
         if (listaFichas == null || listaFichas.isEmpty()) {
             exc.mostrarExcepcion("Pozo", "Pozo vacío");
@@ -33,8 +46,11 @@ public class Pozo {
             juego.pasarFichaJugador(quitarFichaAleatoria());
         }
     }
-    public void jalarFicha(){};
 
+    /**
+     * Método para quitar una ficha aleatoriamente
+     * @return
+     */
     public Ficha quitarFichaAleatoria() {
         Ficha fichaObtenida;
         Random random = new Random();
