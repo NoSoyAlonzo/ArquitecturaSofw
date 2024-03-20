@@ -44,7 +44,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void dividirGrupo(Grupo grupo){
         tablero.obtenerGrupoDividido(grupo);
-        actualizar(instanciaModeloJuego);
+        notificarCambios();
     }
 
     /**
@@ -62,7 +62,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void validarGrupos(){
         tablero.obtenerGruposModificados();
-        actualizar(instanciaModeloJuego);
+        notificarCambios();
     }
 
     /**
@@ -71,7 +71,7 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void jalarFichaPozo(){
         juego.jalarFichaPozo();
-        actualizar(instanciaModeloJuego);
+        notificarCambios();
     }
 
     /**
@@ -80,15 +80,31 @@ public class ModeloJuego implements ModeloFiltro {
      */
     public void pasarTurno(){
         juego.obtenerTurnoSiguiente();
-        actualizar(instanciaModeloJuego);
+        notificarCambios();
     }
 
-    /**
-     * Método que permitirá actualizar los datos del negocio
-     * según haya cambiado la pantalla
-     */
-    @Override
-    public void actualizar(ModeloJuego modeloJuego) {
+    public void setObservador(Observador observador) {
+        this.observador = observador;
+    }
 
+    public void notificarCambios() {
+        if (observador != null) {
+            observador.notifyObservers(this);
+        }
+    }
+
+    @Override
+    public Pozo getPozo() {
+        return pozo;
+    }
+
+    @Override
+    public Tablero getTablero() {
+        return tablero;
+    }
+
+    @Override
+    public Juego getJuego() {
+        return juego;
     }
 }

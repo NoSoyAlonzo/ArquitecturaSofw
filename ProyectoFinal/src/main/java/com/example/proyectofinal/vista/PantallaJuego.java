@@ -26,14 +26,12 @@ public class PantallaJuego implements Observador {
     public void clickPonerFicha(){};
     public void clickTerminarTurno(){};
 
-    public void update(ModeloFiltro modeloFiltro) {
+    private void update(ModeloFiltro modeloFiltro) {
 
     }
 
     @Override
-    public void actualizar() {
-
+    public void notifyObservers(ModeloFiltro modeloFiltro) {
+        update(modeloFiltro);
     }
-
-
 }

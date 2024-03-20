@@ -1,5 +1,12 @@
 package com.example.proyectofinal.modelo;
 
+import com.example.proyectofinal.dominio.Juego;
+import com.example.proyectofinal.dominio.Pozo;
+import com.example.proyectofinal.dominio.Tablero;
+
 public interface ModeloFiltro {
-    void actualizar(ModeloJuego modeloJuego);
+
+    Pozo getPozo();
+    Tablero getTablero();
+    Juego getJuego();
 }
