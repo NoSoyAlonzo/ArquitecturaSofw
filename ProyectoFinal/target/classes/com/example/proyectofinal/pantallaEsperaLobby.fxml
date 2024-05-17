@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectofinal.controladorLobby">
    <children>
       <Label fx:id="labelTitulo" layoutX="232.0" layoutY="34.0" text="SALA DE ESPERA">
          <font>
@@ -177,10 +177,11 @@
       <CheckBox fx:id="checkboxListo2" disable="true" layoutX="488.0" layoutY="261.0" mnemonicParsing="false" text="¿Estás listo?" />
       <CheckBox fx:id="checkboxListo3" disable="true" layoutX="488.0" layoutY="325.0" mnemonicParsing="false" text="¿Estás listo?" />
       <CheckBox fx:id="checkboxListo4" disable="true" layoutX="488.0" layoutY="393.0" mnemonicParsing="false" text="¿Estás listo?" />
-      <Label fx:id="labelContadorJugadores" layoutX="731.0" layoutY="472.0" text="0/4">
+      <Label fx:id="labelContadorJugadores" layoutX="722.0" layoutY="384.0" text="0/4">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
+      <Button fx:id="btnIniciar" layoutX="587.0" layoutY="436.0" mnemonicParsing="false" onAction="#abrirJuego" prefHeight="87.0" prefWidth="211.0" text="Iniciar Partida" />
    </children>
 </Pane>
