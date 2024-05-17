@@ -1,6 +1,5 @@
-package com.example.proyectofinal.vista;
+package com.example.proyectofinal;
 
-import com.example.proyectofinal.PrincipalR;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,7 +10,7 @@ import java.io.IOException;
 public class MenuPrincipalJ extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(PrincipalR.class.getResource("juegoView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MenuPrincipalJ.class.getResource("MenuPrincipal.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ProyectoFinal");
         stage.setScene(scene);
