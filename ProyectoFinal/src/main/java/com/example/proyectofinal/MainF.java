@@ -1,15 +1,17 @@
 package com.example.proyectofinal;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 public class MainF extends  Application{
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmload=new FXMLLoader(MainF.class.getResource("JuegoPrincipal.fxml"));
-        Scene scene = new Scene(fxmload.load());
-        stage.setTitle("Pantalla Menu Principal");
+        FXMLLoader fxmlLoader = new FXMLLoader(MainF.class.getResource("prueba.fxml"));
+        Parent root= fxmlLoader.load();
+        Scene scene = new Scene(root);
+        stage.setTitle("ProyectoFinal");
         stage.setScene(scene);
         stage.show();
     }

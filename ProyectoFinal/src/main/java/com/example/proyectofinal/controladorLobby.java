@@ -1,4 +1,4 @@
 package com.example.proyectofinal;
 
-public class controladorJuego {
+public class controladorLobby {
 }
