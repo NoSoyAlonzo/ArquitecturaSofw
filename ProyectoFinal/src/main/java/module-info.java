@@ -14,4 +14,6 @@ module com.example.proyectofinal {
     exports com.example.proyectofinal;
     exports com.example.proyectofinal.dominio;
     opens com.example.proyectofinal.dominio to javafx.fxml;
+    exports com.example.proyectofinal.broker;
+    opens com.example.proyectofinal.broker to javafx.fxml;
 }
