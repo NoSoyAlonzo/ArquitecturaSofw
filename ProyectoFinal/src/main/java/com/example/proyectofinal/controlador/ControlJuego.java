@@ -1,7 +1,10 @@
 package com.example.proyectofinal.controlador;
 
+import com.example.proyectofinal.dominio.Ficha;
 import com.example.proyectofinal.dominio.Grupo;
 import com.example.proyectofinal.modelo.ModeloJuego;
+
+import java.util.List;
 
 public class ControlJuego {
 
@@ -30,6 +33,6 @@ public class ControlJuego {
     public void pasarTurnoJugador(){
         modeloJuego.pasarTurno();
     };
-    //public void colocarFichaGrupo(){modeloJuego.verifColocarFichaGrupo();};
+    //public void colocarFichaGrupo(){modeloJuego.verifColocarFichaGrupo();}
 
 }
