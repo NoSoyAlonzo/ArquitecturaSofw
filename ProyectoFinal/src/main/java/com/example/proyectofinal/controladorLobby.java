@@ -10,6 +10,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+//Clase que controla la pantalla del Lobby
 public class controladorLobby {
 
     @FXML
